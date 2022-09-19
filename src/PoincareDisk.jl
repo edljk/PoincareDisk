@@ -4,7 +4,6 @@ using LinearAlgebra, StatsBase, Random, CoordinateTransformations, Roots, Printf
 using Makie.GeometryBasics, ColorTypes
 
 include("utils.jl")
-include("test/basic_geomtests.jl")
 
 """
    C, r, P, Q, arclength = geodesic𝔻(U::Array{T}, V::Array{T}) where T
