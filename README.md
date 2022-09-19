@@ -1,5 +1,5 @@
 # PoincareDisk
-xwxwx
+
 Some simple functions in julia to play with Poincaré Hyperbolic disk: geodesics, perpendicular, hyperbolic metric, etc. 
 For instance, the function `hexagonn𝔻` provides the vertices of a perpendicular hexagon of alternate given side lengths (which is unique up to an isometry of 𝔻)
  
