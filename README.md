@@ -3,6 +3,7 @@
 Some simple functions to play with Poincaré Hyperbolic disk: geodesics, perpendicular, hyperbolic metric, etc.
 For instance, the function `hexagonn𝔻` provides the vertices of a perpendicular hexagon of alternate given side lengths (which is unique up to an isometry of 𝔻)
  
+![hexagon_regular](https://user-images.githubusercontent.com/14992507/191103315-32ab1872-8d9b-4f84-82d5-00e764e389f9.png)
 
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://edljk.github.io/PoincareDisk.jl/stable/)
