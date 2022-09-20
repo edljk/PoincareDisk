@@ -4,7 +4,7 @@ Some simple functions in julia to play with Poincaré Hyperbolic disk: geodesics
 For instance, the function `hexagon𝔻` provides the vertices of a perpendicular hexagon of alternate given side lengths (which is unique up to an isometry of 𝔻)
  
  <p align = "center">
-<img src = "https://user-images.githubusercontent.com/14992507/191103315-32ab1872-8d9b-4f84-82d5-00e764e389f9.png)">
+<img src = "https://user-images.githubusercontent.com/14992507/191103315-32ab1872-8d9b-4f84-82d5-00e764e389f9.png">
 </p>
 <p align = "center">
 Fig.1 - 4K Mountains Wallpaper
