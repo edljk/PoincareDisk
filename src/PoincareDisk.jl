@@ -4,6 +4,7 @@ using LinearAlgebra, StatsBase, Random, CoordinateTransformations, Roots, Printf
 using Makie.GeometryBasics, ColorTypes
 
 include("utils.jl")
+include("test/basic_geomtests.jl")
 
 """
    C, r, P, Q, arclength = geodesic𝔻(U::Array{T}, V::Array{T}) where T
@@ -55,6 +56,23 @@ function circle𝔻(I::Array{T}, r::T) where T
     R = (OA - OB) / 2
     OIp = (OA + OB) / 2
     return OIp * d, R
+end
+#-------------------------------------------------------------------------------
+""" 
+   θ = angle𝔻(U::Array{T}, V::Array{T}, W::Array{T}, X::Array{T}) where T
+
+Angle between two interescting geodesics defined by two coupples of points
+"""
+function angle𝔻(U::Array{T}, V::Array{T}, W::Array{T}, X::Array{T}) where T
+    C1, r1, _ = geodesic𝔻(U, V)
+    C2, r2, _ = geodesic𝔻(W, X)
+    d = norm(C1 - C2)
+    if d > (r1 + r2)
+        error("pb in angle𝔻: no intersection")
+    end
+    l = sqrt(((r1 + r2) ^ 2 - d ^ 2) * (d ^ 2 - (r1 - r2) ^ 2)) / d
+    θ = asin(l / (2 * r1)) + asin(l / (2 * r2))
+    return θ
 end
 #-------------------------------------------------------------------------------
 """ 
