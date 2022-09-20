@@ -7,7 +7,7 @@ For instance, the function `hexagon𝔻` provides the vertices of a perpendicula
 <img src = "https://user-images.githubusercontent.com/14992507/191103315-32ab1872-8d9b-4f84-82d5-00e764e389f9.png">
 </p>
 <p align = "center">
-Fig.1 - 4K Mountains Wallpaper
+Fig.1 - Two isometric hexagons (same hyperbolic side lengths)
 </p>
 
 
