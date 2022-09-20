@@ -76,6 +76,23 @@ function angle𝔻(U::Array{T}, V::Array{T}, W::Array{T}, X::Array{T}) where T
 end
 #-------------------------------------------------------------------------------
 """ 
+   area = polygonarea𝔻(V::Vector{Vector{T}}) where T
+
+Area of a closed geodesic polygon defined by its vertices
+"""
+function polygonarea𝔻(V::Vector{Vector{T}}) where T
+    N = length(V)
+    area = T(π) * (N - 2)
+    Ip(k) = mod(k - 1, N) + 1
+    for k = 1:N
+        Pm, P, Pp =  V[Ip(k - 1)], V[Ip(k)], V[Ip(k + 1)]
+        area -= angle𝔻(Pm, P, P, Pp)        
+    end
+    return area
+end
+
+#-------------------------------------------------------------------------------
+""" 
    P, Q = equitriangle𝔻(U::Array{T}, V::Array{T}) where T
 
 Identify the two equilaterial triangles associated to [U, V] ∈ 𝔻
